@@ -2,7 +2,7 @@ import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
 
-export function App() {
+export function App(): JSX.Element {
   const [count, setCount] = useState(0)
 
   return (
