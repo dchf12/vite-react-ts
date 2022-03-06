@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function MyButton({ count, onClick }: { count: Number; onClick: () => void }) {
+function MyButton({ count, onClick }: { count: number; onClick: () => void }): JSX.Element {
   return <button onClick={onClick}>Clicked {count} times</button>;
 }
 
@@ -23,7 +23,7 @@ export default function App(): JSX.Element {
   );
 }
 
-function AboutPage() {
+function AboutPage(): JSX.Element {
   return (
     <>
       <h1>About</h1>
@@ -36,13 +36,18 @@ function AboutPage() {
   );
 }
 
-const user = {
+interface User {
+  name: string;
+  imageUrl: string;
+  imageSize: number;
+}
+const user: User = {
   name: "Name Name",
   imageUrl: "https://avatars.githubusercontent.com/u/89190380?v=4",
   imageSize: 90,
 };
 
-function Profile() {
+function Profile(): JSX.Element {
   return (
     <>
       <h1>{user.name}</h1>
@@ -59,13 +64,18 @@ function Profile() {
   );
 }
 
-const products = [
+interface Product {
+  title: string;
+  isFruit: boolean;
+  id: number;
+}
+const products: Product[] = [
   { title: "Cabbage", isFruit: false, id: 1 },
   { title: "Garlic", isFruit: false, id: 2 },
   { title: "Apple", isFruit: true, id: 3 },
 ];
 
-function ShopList() {
+function ShopList(): JSX.Element {
   const listItems = products.map((product) => (
     <li
       key={product.id}
