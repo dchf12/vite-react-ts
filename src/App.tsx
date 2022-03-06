@@ -1,5 +1,8 @@
 function MyButton(): JSX.Element {
-  return <button>Click</button>;
+  function handleClick() {
+    alert("Clicked");
+  }
+  return <button onClick={handleClick}>Click</button>; //ハンドラ関数は実行しない
 }
 
 export default function App(): JSX.Element {
