@@ -8,6 +8,7 @@ export default function App(): JSX.Element {
       <h1>Welcome to my App</h1>
       <MyButton />
       <AboutPage />
+      <Profile />
     </div>
   );
 }
@@ -25,4 +26,25 @@ function AboutPage() {
   );
 }
 
-<img className="avatar" />;
+const user = {
+  name: "Name Name",
+  imageUrl: "https://avatars.githubusercontent.com/u/89190380?v=4",
+  imageSize: 90,
+};
+
+function Profile() {
+  return (
+    <>
+      <h1>{user.name}</h1>
+      <img
+        src={user.imageUrl}
+        alt={"Prof to " + user.name}
+        className="avatar"
+        style={{
+          width: user.imageSize,
+          height: user.imageSize,
+        }}
+      />
+    </>
+  );
+}
