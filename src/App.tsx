@@ -1,20 +1,21 @@
 import { useState } from "react";
 
-function MyButton(): JSX.Element {
-  const [count, setCount] = useState(0);
-
-  function handleClick() {
-    setCount(count + 1);
-  }
-  return <button onClick={handleClick}>Click:{count}times</button>; //ハンドラ関数は実行しない
+function MyButton({ count, onClick }: { count: Number; onClick: () => void }) {
+  return <button onClick={onClick}>Clicked {count} times</button>;
 }
 
 export default function App(): JSX.Element {
+  const [count, setCount] = useState(0);
+  function handleClick() {
+    setCount(count + 1);
+  }
+
   return (
     <div>
       <h1>Welcome to my App</h1>
-      <MyButton />
-      <MyButton />
+      <h2>Counters that update together</h2>
+      <MyButton count={count} onClick={handleClick} />
+      <MyButton count={count} onClick={handleClick} />
       <AboutPage />
       <Profile />
       <ShopList />
