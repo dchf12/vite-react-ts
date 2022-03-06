@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 function MyButton({ count, onClick }: { count: number; onClick: () => void }): JSX.Element {
   return <button onClick={onClick}>Clicked {count} times</button>;
@@ -42,8 +42,8 @@ interface User {
   imageSize: number;
 }
 const user: User = {
-  name: "Name Name",
-  imageUrl: "https://avatars.githubusercontent.com/u/89190380?v=4",
+  name: 'Name Name',
+  imageUrl: 'https://avatars.githubusercontent.com/u/89190380?v=4',
   imageSize: 90,
 };
 
@@ -53,7 +53,7 @@ function Profile(): JSX.Element {
       <h1>{user.name}</h1>
       <img
         src={user.imageUrl}
-        alt={"Prof to " + user.name}
+        alt={'Prof to ' + user.name}
         className="avatar"
         style={{
           width: user.imageSize,
@@ -70,9 +70,9 @@ interface Product {
   id: number;
 }
 const products: Product[] = [
-  { title: "Cabbage", isFruit: false, id: 1 },
-  { title: "Garlic", isFruit: false, id: 2 },
-  { title: "Apple", isFruit: true, id: 3 },
+  { title: 'Cabbage', isFruit: false, id: 1 },
+  { title: 'Garlic', isFruit: false, id: 2 },
+  { title: 'Apple', isFruit: true, id: 3 },
 ];
 
 function ShopList(): JSX.Element {
@@ -80,7 +80,7 @@ function ShopList(): JSX.Element {
     <li
       key={product.id}
       style={{
-        color: product.isFruit ? "red" : "green",
+        color: product.isFruit ? 'red' : 'green',
       }}
     >
       {product.title}
