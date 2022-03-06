@@ -1,14 +1,19 @@
+import { useState } from "react";
+
 function MyButton(): JSX.Element {
+  const [count, setCount] = useState(0);
+
   function handleClick() {
-    alert("Clicked");
+    setCount(count + 1);
   }
-  return <button onClick={handleClick}>Click</button>; //ハンドラ関数は実行しない
+  return <button onClick={handleClick}>Click:{count}times</button>; //ハンドラ関数は実行しない
 }
 
 export default function App(): JSX.Element {
   return (
     <div>
       <h1>Welcome to my App</h1>
+      <MyButton />
       <MyButton />
       <AboutPage />
       <Profile />
