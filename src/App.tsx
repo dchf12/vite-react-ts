@@ -24,3 +24,5 @@ function AboutPage() {
     </>
   );
 }
+
+<img className="avatar" />;
