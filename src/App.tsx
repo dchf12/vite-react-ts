@@ -21,7 +21,7 @@ export function App(): JSX.Element {
         <p>
           <a
             className="App-link"
-            href="https://reactjs.org"
+            href="https://beta.reactjs.org/learn"
             target="_blank"
             rel="noopener noreferrer"
           >
